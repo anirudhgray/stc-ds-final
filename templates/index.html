@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Heart Disease prediction</title>
+</head>
+
+<body>
+    <h1>
+        Heart Disease Prediction
+    </h1>
+
+    <form action="{{url_for('predict')}}" method="post">
+        <label for="age"> Age Category :</label>
+        <select name="age" id="age" required>
+            <option value="18-24">18-24</option>
+            <option value="25-29">25-29</option>
+            <option value="30-34">30-34</option>
+            <option value="35-39">35-39</option>
+            <option value="40-44">40-44</option>
+            <option value="45-49">45-49</option>
+            <option value="50-54">50-54</option>
+            <option value="55-59">55-59</option>
+            <option value="60-64">60-64</option>
+            <option value="65-69">65-69</option>
+            <option value="70-74">70-74</option>
+            <option value="75-79">75-79</option>
+            <option value="80 or older">80 or older</option>
+        </select>
+
+        <label for="bmi"> BMI:</label>
+        <input type='text' name='bmi' id="bmi" required />
+
+        <label for="physical-health"> Physical Health:</label>
+        <input type='text' id="physical-health" name='physical-health' required />
+
+        <label for="mental-health"> BMI:</label>
+        <input type='text' name='mental-health' id='mental-health' required />
+
+        <label for="smoking">Smoking:</label>
+        <select name="smoking" id="smoking" required>
+            <option value="1">Yes</option>
+            <option value="0">No</option>
+        </select>
+
+        <p> Diabetes : <input type='text' name='Diabetes' placeholder='Enter 0 for no 1 for yes' required='required' />
+        </p>
+        <p>Ejection Fraction : <input type='text' name='Ejection Fraction' placeholder='percentage'
+                required='required' /></p>
+        <p> High Blood Pressure : <input type='text' name='High Blood Pressure' placeholder='Enter 0 for no 1 for yes'
+                required='required' /></p>
+        <p> Platelets : <input type='text' name='Platelets' placeholder='kiloplatelets/mL' required='required' />
+        </p>
+        <p> Serum creatinine : <input type='text' name='Serum creatinine' placeholder='mg/dL' required='required' />
+        </p>
+        <p> Serum Sodium : <input type='text' name='Serum Sodium' placeholder='mEq/L' required='required' /></p>
+        <p> Sex : <input type='text' name='Sex' placeholder='Enter 0 for female 1 for male' required='required' />
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Smoking : <input type='text' name='Smoking'
+                placeholder='Enter 0 for no 1 for yes' required='required' /></p>
+        <p> Time : <input type='text' name='Time' placeholder='Follow-up period (days)' required='required' />
+        </p>
+        <button type="submit" class="btn btn-primary btn-block btn-large">Predict</button>
+    </form>
+</body>
+
+</html>
